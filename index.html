@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaik Abdul Rahiman | ECE Engineer Portfolio</title>
+  <meta name="description"
+    content="Professional portfolio of Shaik Abdul Rahiman, B.Tech Electronics & Communication Engineering student at GMRIT. IoT, Embedded Systems, Automotive Tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========== NAV =========== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <!-- <span class="logo-bracket">&lt;</span> -->
+        <span class="logo-name">Abdul Rahiman</span>
+        <!-- <span class="logo-bracket"> /&gt;</span> -->
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#leadership" class="nav-link">Leadership</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        <li><button class="theme-toggle-btn desktop-theme" aria-label="Toggle Theme"><i
+              class="fa-solid fa-circle-half-stroke"></i></button></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button class="theme-toggle-btn mobile-theme" aria-label="Toggle Theme"><i
+            class="fa-solid fa-circle-half-stroke"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+      <a href="#about" class="drawer-link" data-close>About</a>
+      <a href="#skills" class="drawer-link" data-close>Skills</a>
+      <a href="#projects" class="drawer-link" data-close>Projects</a>
+      <a href="#experience" class="drawer-link" data-close>Experience</a>
+      <a href="#leadership" class="drawer-link" data-close>Leadership</a>
+      <a href="#achievements" class="drawer-link" data-close>Achievements</a>
+      <a href="#education" class="drawer-link" data-close>Education</a>
+      <a href="#contact" class="drawer-cta" data-close>Get In Touch →</a>
+    </nav>
+  </nav>
+
+  <!-- =========== HERO =========== -->
+  <section id="hero" aria-label="Hero section">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="hero-inner">
+      <!-- Photo -->
+      <div class="hero-photo">
+        <div class="hero-photo-ring">
+          <div class="hero-photo-inner">
+            <img src="profile.png" alt="Shaik Abdul Rahiman" id="profile-img-hero" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Open to Internships &amp; Full‑Time
+        </div>
+
+        <h1>
+          <span class="hero-greeting">Hello, I'm</span>
+          <span class="hero-name">Abdul Rahiman</span>
+        </h1>
+
+        <div class="hero-typewriter">
+          <span class="tw-prefix">And I'm a </span>
+          <span class="tw-text" id="typewriter"></span>
+          <span class="tw-cursor">|</span>
+        </div>
+
+        <p class="hero-desc">
+          B.Tech Electronics &amp; Communication Engineering student at GMRIT, Rajam.
+          Building smart embedded systems, IoT solutions &amp; exploring automotive tech.
+        </p>
+
+        <div class="hero-socials">
+          <a href="https://github.com/abdul22012k5" target="_blank" class="social-icon" id="hero-github"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shaik-abdul-rahiman-256409334/" target="_blank" class="social-icon"
+            id="hero-linkedin" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:skabdulrahiman539@gmail.com" class="social-icon" id="hero-email" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <!-- <a href="tel:+917981244581" class="social-icon" id="hero-phone" aria-label="Phone">
+            <i class="fa-solid fa-phone"></i>
+          </a> -->
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-grad" id="hero-view-work">
+            <span>View My Work</span><i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-hire">
+            <span>Hire Me</span><i class="fa-solid fa-paper-plane"></i>
+          </a>
+          <a href="resume.pdf" class="btn btn-ghost" id="hero-resume" download>
+            <i class="fa-solid fa-download"></i><span>Resume</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats">
+      <div class="hero-stats-row">
+        <div class="stat-item">
+          <span class="stat-num" data-target="5">0</span>
+          <span class="stat-lbl">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-lbl">Prizes Won</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-lbl">Certifications</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="1">0</span>
+          <span class="stat-lbl">Patent Filed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" id="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT =========== -->
+  <section id="about" class="section" aria-label="About section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">01 — About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-wrap">
+        <!-- Visual -->
+        <div class="about-visual">
+          <div class="about-card-img" id="about-image-3d">
+            <img src="profile.png" alt="Shaik Abdul Rahiman — ECE Engineer" class="profile-img" id="profile-img" />
+          </div>
+          <div class="float-chip chip-1">
+            <i class="fa-solid fa-microchip"></i><span>Embedded Systems</span>
+          </div>
+          <div class="float-chip chip-2">
+            <i class="fa-solid fa-wifi"></i><span>IoT Developer</span>
+          </div>
+          <div class="float-chip chip-3">
+            <i class="fa-solid fa-graduation-cap"></i><span>B.Tech ECE</span>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text-side">
+          <p class="about-lead">
+            I'm a passionate <strong>Electronics &amp; Communication Engineering student</strong> with a deep
+            interest in IoT, embedded systems, and automotive technologies.
+          </p>
+          <p class="about-body">
+            Currently in my 3rd year at GMRIT, Rajam. I've filed a patent, won multiple project expos,
+            completed an industrial IoT internship, and am actively working on QNX RTOS and automotive
+            embedded systems. I believe in learning by doing — always pushing boundaries with real hardware.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-user"></i>Name</span>
+              <span class="info-val">Shaik Abdul Rahiman</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-cake-candles"></i>Age</span>
+              <span class="info-val">21 Years</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-map-pin"></i>Location</span>
+              <span class="info-val">Rajam, Vizianagaram, AP</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-graduation-cap"></i>Degree</span>
+              <span class="info-val">B.Tech ECE (2027)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-star"></i>CGPA</span>
+              <span class="info-val">8.1 / 10.0</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key"><i class="fa-solid fa-circle-check"></i>Status</span>
+              <span class="info-val status-cyan">Open to Work</span>
+            </div>
+          </div>
+
+          <div class="about-btns">
+            <a href="#contact" class="btn btn-grad" id="about-contact-btn">
+              <span>Let's Connect</span><i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="resume.pdf" class="btn btn-outline" id="about-resume-btn" download>
+              <i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS =========== -->
+  <section id="skills" class="section section-alt" aria-label="Skills section"
+    style="position:relative; overflow:hidden; border-top: 1px solid var(--bdr); border-bottom: 1px solid var(--bdr);">
+    <div class="container relative-z">
+
+      <div class="skills-header-centered reveal">
+        <h2 class="skills-title-main">Technical Arsenal</h2>
+        <div class="skills-subtitle-pill">Hardware, embedded, IoT, and systems skills I use to build real-world
+          solutions.</div>
+      </div>
+
+      <div class="skills-pills-wrap reveal">
+        <!-- Row 1/2 Equivalent (Flex Wrap) -->
+        <div class="s-pill"><i class="fa-solid fa-microchip" style="color: #00d4aa;"></i><span>ESP32 / ESP8266</span>
+        </div>
+        <div class="s-pill"><i class="fa-solid fa-circle-dot" style="color: #00979d;"></i><span>Arduino</span></div>
+        <div class="s-pill"><i class="fa-solid fa-code" style="color: #6c63ff;"></i><span>C / Embedded C</span></div>
+        <div class="s-pill"><i class="fa-solid fa-tower-broadcast" style="color: #f59e0b;"></i><span>MQTT</span></div>
+        <div class="s-pill"><i class="fa-solid fa-network-wired" style="color: #ec4899;"></i><span>Modbus</span></div>
+        <div class="s-pill"><i class="fa-solid fa-fire" style="color: #ffca28;"></i><span>Firebase</span></div>
+        <div class="s-pill"><i class="fa-solid fa-mobile-screen" style="color: #23c48e;"></i><span>Blynk IoT</span>
+        </div>
+        <div class="s-pill"><i class="fa-solid fa-cloud-arrow-up" style="color: #0ea5e9;"></i><span>ThingSpeak</span>
+        </div>
+        <div class="s-pill"><i class="fa-solid fa-layer-group" style="color: #00d4aa;"></i><span>PCB Design</span></div>
+        <div class="s-pill"><i class="fa-solid fa-gauge-high" style="color: #f59e0b;"></i><span>Sensor
+            Integration</span></div>
+        <div class="s-pill"><i class="fa-solid fa-bolt" style="color: #6c63ff;"></i><span>Circuit Design</span></div>
+        <div class="s-pill"><i class="fa-solid fa-gears" style="color: #ef4444;"></i><span>QNX RTOS</span></div>
+        <div class="s-pill"><i class="fa-solid fa-car" style="color: #f59e0b;"></i><span>CAN Protocol</span></div>
+        <div class="s-pill"><i class="fa-brands fa-linux" style="color: #fcc624;"></i><span>Ubuntu Linux</span></div>
+        <div class="s-pill"><i class="fa-solid fa-cube" style="color: #e81cff;"></i><span>3D Designer</span></div>
+
+        <!-- Wide element like the image -->
+        <div class="s-pill wide-pill"><i class="fa-solid fa-brain" style="color: #8b5cf6;"></i><span>Edge AI</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========== PROJECTS =========== -->
+  <section id="projects" class="section" aria-label="Projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">03 — Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+        <p class="section-sub">Hardware and IoT solutions solving real‑world problems.</p>
+      </div>
+
+      <div class="proj-filters">
+        <button class="f-btn active" data-filter="all" id="proj-filter-all">All</button>
+        <button class="f-btn" data-filter="iot" id="proj-filter-iot">IoT</button>
+        <button class="f-btn" data-filter="hardware" id="proj-filter-hw">Hardware</button>
+        <button class="f-btn" data-filter="ai" id="proj-filter-ai">AI / IIoT</button>
+      </div>
+
+      <div class="proj-grid" id="proj-grid">
+
+        <!-- Card 1 -->
+        <article class="proj-card" data-filter="iot" id="proj-buspass">
+          <div class="proj-img-wrap">
+            <img src="buspass.png" alt="Smart Bus Pass Verification System" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Smart Bus Pass Verification System</h3>
+            <p class="p-desc">RFID-based student bus pass verification with real-time Firebase database integration.
+              Patent filed for this innovation.</p>
+            <div class="p-tags">
+              <span class="p-tag">ESP32</span><span class="p-tag">MFRC522</span><span class="p-tag">Firebase</span>
+            </div>
+            <div class="proj-actions">
+              <a href="smart-bus-pass.pdf" target="_blank" class="p-btn">
+                <i class="fa-solid fa-file-pdf"></i> Full Details
+              </a>
+              <a href="https://pavan-1522.github.io/apsrtc_project/" target="_blank" class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="proj-card" data-filter="hardware" id="proj-pcb">
+          <div class="proj-img-wrap">
+            <img src="pcb.png" alt="Multi-Channel Relay PCB" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Multi-Channel Relay PCB (2CH &amp; 4CH)</h3>
+            <p class="p-desc">Designed 2-channel and 4-channel relay PCB layouts for automation systems integrated with
+              ESP32 for IoT control.</p>
+            <div class="p-tags">
+              <span class="p-tag">PCB Design</span><span class="p-tag">ESP32</span><span class="p-tag">Relay</span>
+            </div>
+            <div class="proj-actions">
+              <!-- <a href="https://github.com/abdul22012k5" target="_blank" class="p-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a> -->
+              <a href="C:\Users\Sahith\.gemini\antigravity\scratch\portfolio\2 and 4 channel.mp4" target="_blank"
+                class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="proj-card" data-filter="iot" id="proj-sewage">
+          <div class="proj-img-wrap">
+            <img src="sewage.png" alt="Sewage Gas Monitoring System" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Sewage Gas Monitoring System</h3>
+            <p class="p-desc">Multi-sensor system detecting CO, methane, and ammonia levels in sewer environments with
+              cloud logging and alerts.</p>
+            <div class="p-tags">
+              <span class="p-tag">ESP32</span><span class="p-tag">MQ2/3/7</span><span class="p-tag">Firebase</span>
+            </div>
+            <div class="proj-actions">
+              <button class="p-btn p-btn-prototype" data-prototype="sewage_diagram.jpeg" title="View Technical Diagram">
+                <i class="fa-solid fa-image"></i> Technical Diagram
+              </button>
+              <a href="https://abdul22012k5.github.io/Gas/" target="_blank" class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="proj-card" data-filter="ai" id="proj-coldchain">
+          <div class="proj-img-wrap">
+            <img src="coldchain.png" alt="Predictive IIoT Cold Chain Monitor" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Predictive IIoT Cold Chain Monitor</h3>
+            <p class="p-desc">On-device Edge AI with blockchain audit trails for secure, predictive cold chain
+              monitoring — preventing spoilage in real time.</p>
+            <div class="p-tags">
+              <span class="p-tag">IIoT</span><span class="p-tag">Edge AI</span><span class="p-tag">Blockchain</span>
+            </div>
+            <div class="proj-actions">
+              <button class="p-btn p-btn-prototype" data-prototype="coldchain_prototype.png"
+                title="View Prototype Output">
+                <i class="fa-solid fa-image"></i> Prototype
+              </button>
+              <a href="https://trip.elegets.in/" target="_blank" class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="proj-card" data-filter="iot" id="proj-airquality">
+          <div class="proj-img-wrap">
+            <img src="airquality.png" alt="Air Quality Monitoring System" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Air Quality Monitoring System</h3>
+            <p class="p-desc">Environmental pollution monitoring system built for the Diploma final project. Tracks air
+              quality indices using multiple gas sensors.</p>
+            <div class="p-tags">
+              <span class="p-tag">Arduino</span><span class="p-tag">Gas Sensors</span><span class="p-tag">IoT</span>
+            </div>
+            <div class="proj-actions">
+              <button class="p-btn p-btn-prototype" data-prototype="airquality_prototype.png"
+                title="View Prototype Output">
+                <i class="fa-solid fa-image"></i> Prototype
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="proj-card" data-filter="iot" id="proj-dualsecurity">
+          <div class="proj-img-wrap">
+            <img src="dualsecurity.png" alt="Dual Authentication Vehicle Security System" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">Dual Authentication Vehicle Security System</h3>
+            <p class="p-desc">Designed an intelligent vehicle security system integrating dual authentication (RFID and
+              cloud-based IoT control) with real-time monitoring and remote access.</p>
+            <div class="p-tags">
+              <span class="p-tag">ESP32</span><span class="p-tag">RFID</span><span class="p-tag">Firebase</span>
+            </div>
+            <div class="proj-actions">
+              <button class="p-btn p-btn-prototype" data-prototype="dualsecurity_prototype.png"
+                title="View Prototype Output">
+                <i class="fa-solid fa-image"></i> Prototype
+              </button>
+              <a href="https://abdul22012k5.github.io/Vehicle_Security/" target="_blank" class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- Card 7: ESP32 Custom PCB -->
+        <article class="proj-card" data-filter="hardware" id="proj-esp32-pcb">
+          <div class="proj-img-wrap">
+            <img src="esp32_pcb.png" alt="ESP32 Custom PCB Design" />
+          </div>
+          <div class="proj-content-wrap">
+            <h3 class="p-title">ESP32 Automation PCB</h3>
+            <p class="p-desc">Custom-designed ESP32 PCB developed in EasyEDA for IoT-based home automation and cloud
+              integration.</p>
+            <div class="p-tags">
+              <span class="p-tag">PCB Design</span><span class="p-tag">ESP32</span><span class="p-tag">EasyEDA</span>
+            </div>
+            <div class="proj-actions">
+              <a href="Recording%202025-08-09%20185906.mp4" target="_blank" class="p-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EXPERIENCE =========== -->
+  <section id="experience" class="section section-alt" aria-label="Experience section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">04 — Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="tl-item" id="exp-elegets">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#10b981">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <div class="tl-role">Partner — EleGets Startup</div>
+                <div class="tl-company">EleGets Electronics &amp; Innovation</div>
+              </div>
+            </div>
+            <span class="tl-date">
+              <i class="fa-regular fa-calendar"></i>2025 — Present
+            </span>
+            <p class="tl-desc">
+              Partner EleGets, an electronics-focused startup working on innovative embedded and IoT-based projects.
+              Actively involved in designing and developing real-time hardware solutions, PCB design, and system
+              prototyping.
+              The company also focuses on supplying quality electronic components and supporting student projects.
+              Registered under MSME, with ongoing efforts to provide internship opportunities in hardware design and PCB
+              development.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">Startup</span>
+              <span class="tl-tag">Embedded Systems</span>
+              <span class="tl-tag">PCB Design</span>
+              <span class="tl-tag">IoT</span>
+              <span class="tl-tag">Hardware Development</span>
+              <span class="tl-tag">MSME Registered</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" id="exp-current">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#f59e0b"><i class="fa-solid fa-car"></i></div>
+              <div>
+                <div class="tl-role">Self-Directed Research — Automotive Embedded</div>
+                <div class="tl-company">Personal Projects &amp; Labs</div>
+              </div>
+            </div>
+            <span class="tl-date"><i class="fa-regular fa-calendar"></i>2024 — Present</span>
+            <p class="tl-desc">Independently exploring QNX RTOS for automotive applications, hands-on work with CAN
+              protocol communication systems, and developing in Ubuntu Linux environments. Focused on automotive
+              embedded systems and real-time communication for future career goals.</p>
+            <div class="tl-tags">
+              <span class="tl-tag">QNX RTOS</span><span class="tl-tag">CAN Protocol</span>
+              <span class="tl-tag">Linux</span><span class="tl-tag">Automotive</span><span class="tl-tag">Real-Time
+                Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" id="exp-cems">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#00d4aa"><i class="fa-solid fa-industry"></i></div>
+              <div>
+                <div class="tl-role">IoT &amp; Embedded Systems Intern</div>
+                <div class="tl-company">CEMS Company</div>
+              </div>
+            </div>
+            <span class="tl-date"><i class="fa-regular fa-calendar"></i>June 2024 (1 Month)</span>
+            <p class="tl-desc">Worked on industrial IoT communication systems at CEMS. Developed embedded communication
+              protocols and gained hands-on experience with industrial-grade IoT systems, integrating MQTT for real-time
+              data exchange and Modbus for device communication.</p>
+            <div class="tl-tags">
+              <span class="tl-tag">MQTT</span><span class="tl-tag">Modbus</span>
+              <span class="tl-tag">UART</span><span class="tl-tag">Embedded C</span><span class="tl-tag">IoT</span>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== LEADERSHIP / EXTRACURRICULAR =========== -->
+  <section id="leadership" class="section" aria-label="Leadership section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Leadership</span>
+        <h2 class="section-title">Extracurricular Activities</h2>
+      </div>
+      <div class="timeline" id="timeline-leadership">
+
+        <div class="tl-item" id="lead-iete">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#8b5cf6"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <div class="tl-role">Student Coordinator</div>
+                <div class="tl-company">IETE Student Chapter, GMRIT</div>
+              </div>
+            </div>
+            <span class="tl-date"><i class="fa-regular fa-calendar"></i>2024 — Present | Rajam, AP</span>
+            <p class="tl-desc">
+              &bull; Organized tech events, workshops, and seminars for engineering students.<br>
+              &bull; Led volunteer teams and collaborated with faculty for outreach.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">Leadership</span>
+              <span class="tl-tag">Event Coordination</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" id="lead-robotics">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#ec4899"><i class="fa-solid fa-robot"></i></div>
+              <div>
+                <div class="tl-role">Club Coordinator</div>
+                <div class="tl-company">Robotic Club, GMRIT</div>
+              </div>
+            </div>
+            <span class="tl-date"><i class="fa-regular fa-calendar"></i>2024 — Present | Rajam, AP</span>
+            <p class="tl-desc">
+              &bull; Mentored juniors in robotics and embedded systems design.<br>
+              &bull; Conducted robotics competitions and project exhibitions.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">Robotics</span>
+              <span class="tl-tag">Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" id="lead-ieee">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <div class="tl-logo" style="--lc:#0ea5e9"><i class="fa-solid fa-network-wired"></i></div>
+              <div>
+                <div class="tl-role">Member</div>
+                <div class="tl-company">IEEE Member, GMRIT</div>
+              </div>
+            </div>
+            <span class="tl-date"><i class="fa-regular fa-calendar"></i>2025 — Present | Rajam, AP</span>
+            <p class="tl-desc">
+              &bull; Contributing to professional networking and knowledge exchange in emerging technologies.<br>
+              &bull; Participated in IEEE events and workshops to strengthen skills in electronics.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">IEEE</span>
+              <span class="tl-tag">Networking</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== ACHIEVEMENTS =========== -->
+  <section id="achievements" class="section section-alt" aria-label="Achievements section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">05 — Achievements</span>
+        <h2 class="section-title">Awards &amp; Recognition</h2>
+      </div>
+
+      <div class="ach-grid">
+        <div class="ach-card" id="ach-stepcon">
+          <div class="ach-icon" style="--ac:#f59e0b"><i class="fa-solid fa-trophy"></i></div>
+          <div class="ach-body">
+            <h3>STEPCON GMRIT — Project Expo</h3>
+            <span class="ach-badge gold">🥇 1st Prize — ₹10,000</span>
+            <p>Won 1st place at STEPCON 2025, GMRIT (February 2025) for the Smart Bus Pass Verification System project.
+            </p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-robosoccer">
+          <div class="ach-icon" style="--ac:#6c63ff"><i class="fa-solid fa-robot"></i></div>
+          <div class="ach-body">
+            <h3>Robo Soccer — ANITS Vizag</h3>
+            <span class="ach-badge gold">🥇 1st Prize ₹1,000</span>
+            <p>Won 1st place at the Robo Soccer competition held at ANITS, Visakhapatnam (March 2025).</p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-anits">
+          <div class="ach-icon" style="--ac:#ef4444"><i class="fa-solid fa-medal"></i></div>
+          <div class="ach-body">
+            <h3>Project Expo — ANITS Vizag</h3>
+            <span class="ach-badge silver">🥈 2nd Prize — ₹3,000</span>
+            <p>Secured 2nd place at the Project Expo held at ANITS, Visakhapatnam for innovative IoT project work.</p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-anits">
+          <div class="ach-icon" style="--ac:#ec4899"><i class="fa-solid fa-medal"></i></div>
+          <div class="ach-body">
+            <h3>Eletra hack (over night event) - GMRIT, Rajam</h3>
+            <span class="ach-badge silver">🥈 2nd Prize — ₹2,000</span>
+            <p>Secured 2nd place at the thinkercad held at GMRID, Rajam for IoT problem statements.</p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-visakha">
+          <div class="ach-icon" style="--ac:#10b981"><i class="fa-solid fa-award"></i></div>
+          <div class="ach-body">
+            <h3>Project Expo — Visakha Institute</h3>
+            <span class="ach-badge silver">🥈 2nd Prize — ₹2,000</span>
+            <p>Awarded 2nd place at Visakha Institute's Project Expo for embedded systems and IoT innovation.</p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-patent">
+          <div class="ach-icon" style="--ac:#8b5cf6"><i class="fa-solid fa-file-shield"></i></div>
+          <div class="ach-body">
+            <h3>Patent Filed</h3>
+            <span class="ach-badge neutral">📄 Patent Holder</span>
+            <p>Filed a patent for the Smart Bus Pass Verification System — an RFID-based student transit verification
+              innovation.</p>
+          </div>
+        </div>
+        <div class="ach-card" id="ach-paper">
+          <div class="ach-icon" style="--ac:#f59e0b"><i class="fa-solid fa-seedling"></i></div>
+          <div class="ach-body">
+            <h3>Term Paper — Aeroponics System</h3>
+            <span class="ach-badge neutral">📝 Research Paper</span>
+            <p>Authored a term paper on Aeroponics systems — exploring IoT-integrated soilless farming as an
+              agricultural innovation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-header" style="margin-top:5rem">
+        <h2 class="section-title" style="font-size:1.8rem">Certifications</h2>
+      </div>
+      <div class="cert-row">
+        <div class="cert-card" id="cert-lt-iot">
+          <div class="cert-ico" style="--cc:#00d4aa"><i class="fa-solid fa-wifi"></i></div>
+          <div>
+            <h4>IoT Certification</h4>
+            <span>L&amp;T EduTech — Industrial IoT</span>
+          </div>
+        </div>
+        <div class="cert-card" id="cert-lt-linux">
+          <div class="cert-ico" style="--cc:#fcc624"><i class="fa-brands fa-linux"></i></div>
+          <div>
+            <h4>Linux OS Certification</h4>
+            <span>L&amp;T EduTech — Linux Fundamentals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EDUCATION =========== -->
+  <section id="education" class="section section-alt" aria-label="Education section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">06 — Education</span>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="edu-grid">
+
+        <div class="edu-card" id="edu-btech">
+          <div class="edu-year-bar">2023 — 2027</div>
+          <div class="edu-body">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>B.Tech — Electronics &amp; Communication Engineering</h3>
+            <span class="edu-place">GMR Institute of Technology (GMRIT), Rajam</span>
+            <div class="edu-grade"><span>CGPA:</span><strong>8.1 / 10.0</strong></div>
+            <p>Relevant Coursework: Embedded Systems, Digital Electronics, Signals &amp; Systems, Microprocessors,
+              Communication Systems, IoT, VLSI Design, Control Systems.</p>
+            <div class="edu-tags">
+              <span class="edu-tag">🏆 Project Expo Winner</span>
+              <span class="edu-tag">🔬 IoT Research</span>
+              <span class="edu-tag">📄 Patent Holder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card" id="edu-diploma">
+          <div class="edu-year-bar">2020 — 2023</div>
+          <div class="edu-body">
+            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+            <h3>Diploma — Electronics &amp; Communication Engineering</h3>
+            <span class="edu-place">Dr. B.R. Ambedkar GMR Polytechnic, Bommuru, Rajahmundry</span>
+            <div class="edu-grade"><span>Percentage:</span><strong>87.4%</strong></div>
+            <p>Specialised in electronics and communication fundamentals. Built the Air Quality Monitoring System as the
+              final-year diploma project using Arduino and sensor arrays.</p>
+            <div class="edu-tags">
+              <span class="edu-tag">🛠️ Diploma Project</span>
+              <span class="edu-tag">⚡ Electronics Lab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card" id="edu-school">
+          <div class="edu-year-bar">Completed 2020</div>
+          <div class="edu-body">
+            <div class="edu-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Secondary School (SSC / Class X)</h3>
+            <span class="edu-place">St. Anne's High School, Chintapalli</span>
+            <div class="edu-grade"><span>GPA:</span><strong>8.5 / 10.0</strong></div>
+            <p>Completed secondary education at St. Anne's High School with strong fundamentals in mathematics and
+              science. Foundation for engineering career path.</p>
+            <div class="edu-tags">
+              <span class="edu-tag">🔬 Science Foundation</span>
+              <span class="edu-tag">📐 Math Enthusiast</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT =========== -->
+  <section id="contact" class="section" aria-label="Contact section">
+    <div class="container relative-z">
+
+      <div class="contact-header-centered reveal">
+        <h2 class="contact-title-main">Contact Me</h2>
+        <p class="contact-subtitle-main">Let's connect and bring your ideas to life!</p>
+      </div>
+
+      <div class="contact-pills-wrap reveal">
+        <a href="https://instagram.com/sk.abdul_rahiman_" target="_blank" class="c-pill" id="cpill-ig">
+          <i class="fa-brands fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="mailto:skabdulrahiman539@gmail.com" class="c-pill" id="cpill-email">
+          <i class="fa-solid fa-at"></i>
+          <span>Email</span>
+        </a>
+
+        <a href="https://github.com/abdul22012k5" target="_blank" class="c-pill" id="cpill-gh">
+          <i class="fa-brands fa-github"></i>
+          <span>Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/shaik-abdul-rahiman-256409334/" target="_blank" class="c-pill"
+          id="cpill-li">
+          <i class="fa-brands fa-linkedin-in" style="color: #0077b5;"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">Abdul Rahiman</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </a>
+        <p style="font-size:0.8rem;color:var(--text-3)">Designed &amp; Built with ❤️ by Shaik Abdul Rahiman · B.Tech
+          ECE, GMRIT '27</p>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Shaik Abdul Rahiman. All rights reserved.</span>
+        <!-- <span>Made with HTML, CSS &amp; Three.js</span> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Prototype Modal -->
+  <div id="prototype-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <img src="" alt="Project Prototype / Diagram" id="modal-img" />
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
